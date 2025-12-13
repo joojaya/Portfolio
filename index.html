@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="dark"> <head>
+<html lang="en" class="dark">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Professional Portfolio</title>
@@ -14,9 +15,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-indigo': '#B0179A', // Lighter indigo for better contrast on dark background
+                        'primary-indigo': '#B0179A', 
                         'dark-bg': '#111827',
-                        'card-bg': '#1f2937', // Darker gray for cards
+                        'card-bg': '#1f2937', 
                     }
                 }
             }
@@ -33,28 +34,34 @@
         .contact-link {
             @apply text-xl text-primary-indigo hover:text-indigo-400 transition duration-300 flex items-center font-medium;
         }
-        /* Hidden by default on mobile */
         #mobile-menu {
             transition: transform 0.3s ease-out;
             transform: translateX(100%);
         }
-        /* Show when active */
         .menu-open #mobile-menu {
             transform: translateX(0);
+        }
+        /* Modal Animation */
+        .modal-animate {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
         }
     </style>
 </head>
 
-<body class="bg-dark-bg text-gray-200 transition-colors duration-500">
+<body class="bg-dark-bg text-gray-200 transition-colors duration-500 relative">
 
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden'); // Simple visibility toggle
+            menu.classList.toggle('hidden'); 
         }
     </script>
 
-    <header class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-sm shadow-xl shadow-gray-900 transition duration-500">
+    <header class="sticky top-0 z-40 bg-dark-bg/95 backdrop-blur-sm shadow-xl shadow-gray-900 transition duration-500">
         <div class="container mx-auto p-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-primary-indigo hover:text-indigo-400 transition duration-300">
                 Jayavarshini.JV </a>
@@ -65,7 +72,7 @@
                 <a href="#skills" class="text-gray-300 hover:text-primary-indigo font-medium transition">Skills</a>
                 <a href="#projects" class="text-gray-300 hover:text-primary-indigo font-medium transition">Projects</a>
                 <a href="#contact" class="text-gray-300 hover:text-primary-indigo font-medium transition">Contact</a>
-            </nav>           
+            </nav>            
         </div>
     </header>
 
@@ -79,9 +86,8 @@
                     <p class="text-xl md:text-xl text-gray-400 mb-6">
                         Hello, I’m Jayavarshini — A recent Computer Science graduate with strong communication ,Problem solving and analytical skills. I’m passionate about building clean, user-friendly applications and transforming ideas into meaningful solutions using modern web technologies. I am quick learner motivated and committed to continuous learning and enjoy working on projects that deliver real-world impact.I am eager to contribute to a dynamic organization where I can apply my academic knowledge and technical skills, creativity, and problem-solving mindset. I am a quick learner, highly motivated, and passionate.
                     </p>
-                    <a href="JV.pdf" download="JV.pdf" 
-                    class="inline-block px-8 py-3 bg-primary-indigo text-white 
-                    font-semibold rounded-lg shadow-lg hover:bg-indigo-500 transition duration-300">Download My Resume (PDF)</a>
+                    
+                    <a href="JV.pdf" download="JV.pdf" class="inline-block px-8 py-3 bg-primary-indigo text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-500 transition duration-300">Download My Resume (PDF)</a>
                         
                     <a href="#contact" class="inline-block px-8 py-3 bg-primary-indigo text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-500 transition duration-300">
                         Contact Me <i class="fas fa-arrow-right ml-2"></i>
@@ -98,7 +104,6 @@
                 <h2 class="text-4xl font-bold text-center mb-12">Education Timeline <i class="fas fa-graduation-cap text-primary-indigo ml-2"></i></h2>
                 
                 <ol class="relative border-l border-gray-700 ml-4 md:ml-12">  
-                      
                     <li class="mb-10 ml-6">
                         <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-primary-indigo">
                             <i class="fas fa-star text-white text-xs"></i>
@@ -108,7 +113,7 @@
                             <h3 class="text-xl font-semibold text-white">B.Tech in Computer Science</h3>
                             <p class="text-base font-normal text-gray-300">Dr.MGR Educational and Research Institute</p>
                             <p class="text-sm text-gray-400">CGPA: [8.55/10.0]</p>
-							<P class="text-sm text-gray-400">Percentage: 80.79 %</P>
+                            <P class="text-sm text-gray-400">Percentage: 80.79 %</P>
                         </div>
                     </li>
                     <li class="mb-10 ml-6">
@@ -119,7 +124,7 @@
                             <time class="block mb-2 text-sm font-semibold leading-none text-gray-400">2020 - 2021</time>
                             <h3 class="text-xl font-semibold text-white">Higher Secondary Education</h3>
                             <p class="text-base font-normal text-gray-300">Velammal Vidhyashram</p>
-							<p class="text-base font-normal text-gray-300">CBSE</p>
+                            <p class="text-base font-normal text-gray-300">CBSE</p>
                             <p class="text-sm text-gray-400">Percentage: 78.8%</p>
                         </div>
                     </li>
@@ -131,7 +136,7 @@
                             <time class="block mb-2 text-sm font-semibold leading-none text-gray-400">2018 - 2019</time>
                             <h3 class="text-xl font-semibold text-white">High School Education</h3>
                             <p class="text-base font-normal text-gray-300">Kavi Bharathi Vidyalaya</p>
-							<p class="text-base font-normal text-gray-300">CBSE</p>
+                            <p class="text-base font-normal text-gray-300">CBSE</p>
                             <p class="text-sm text-gray-400">Percentage: 65.5%</p>
 
                         </div>
@@ -149,10 +154,10 @@
                         <h3 class="text-2xl font-semibold mb-4 text-primary-indigo"><i class="fas fa-desktop mr-2"></i> Front End</h3>
                         <div class="flex flex-wrap flex-row gap-2">
                             <ol>
-                                <li class="skill-tag">HTML<li>
+                                <li class="skill-tag">HTML</li>
                                 <li class="skill-tag">CSS/Tailwind</li>
                                 <li class="skill-tag">JavaScript</li>
-                                <li class="skill-tag">React.js<li>
+                                <li class="skill-tag">React.js</li>
                                 <li class="skill-tag">UI/UX</li>
                             </ol>
 
@@ -225,7 +230,7 @@
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <article class="bg-card-bg rounded-xl shadow-xl overflow-hidden group transition duration-300 hover:shadow-2xl">
-                        <img src="Hoax.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <img src="Hoax.png" alt="Hoax Detector" onclick="openModal(this.src, 'Hoax Detector')" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Hoax Detector</h3>
                             <p class="text-gray-400 mb-4">Developed an AI-based NLP model using Python and scikit-learn to classify misleadingcontent.<br>Integrated Streamlit interface for real-time prediction and user interaction</p>
@@ -241,7 +246,7 @@
                     </article>
 
                     <article class="bg-card-bg rounded-xl shadow-xl overflow-hidden group transition duration-300 hover:shadow-2xl">
-                        <img src="Recipe.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <img src="Recipe.png" alt="Recipe Book" onclick="openModal(this.src, 'Recipe Book')" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Recipe Book</h3>
                             <p class="text-gray-400 mb-4">Designed responsive recipe browsing platform using HTML, CSS, and JavaScript.<br>Implemented dynamic user interface for smooth navigation and content filtering</p>
@@ -257,7 +262,7 @@
                     </article>
 
                     <article class="bg-card-bg rounded-xl shadow-xl overflow-hidden group transition duration-300 hover:shadow-2xl">
-                        <img src="Color.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                        <img src="Color.png" alt="Color Analysis Tool" onclick="openModal(this.src, 'Color Analysis Tool')" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer">
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold mb-2">Color Analysis Tool</h3>
                             <p class="text-gray-400 mb-4">Created web-based tool using Tailwind CSS and JavaScript to analyze image colorschemes.<br>Generated complementary color palette recommendations based on user input.</p>
@@ -307,7 +312,7 @@
                                 <ul class="list-disc list-inside text-gray-300 space-y-1">
                                     <li>Analyzed large datasets and Conducted data cleaning, preprocessing, and transformation using Excel and Python</li> 
                                     <li>Performed exploratory data analysis (EDA) to identify patterns and business insights</li>
-	                                <li>Optimized reporting workflows to enhance data interpretation efficiency</li>
+                                    <li>Optimized reporting workflows to enhance data interpretation efficiency</li>
                                     <li>Performed data cleaning, preprocessing, and transformation using Pandas and NumPy.</li>
                                     <li>Conducted exploratory data analysis (EDA) to uncover hidden correlations and data anomalies.</li>
                                     
@@ -315,8 +320,8 @@
                             </div>
                         </div>
                         </div>
-                  </div>                         
-                                   
+                  </div>                          
+                                    
              </div>
           
             <div>
@@ -337,141 +342,143 @@
         <section id="certs" class="py-16 bg-gray-900 border-t border-gray-800">
             <div class="container mx-auto px-10">
                 <h2 class="text-4xl font-bold text-center mb-12">Certifications<i class="fas fa-certificate text-primary-indigo ml-2"></i></h2>
+                <p class="text-center text-gray-400 mb-8 text-sm">(Click on any certificate to view details)</p>
                 
                 <div class="mb-12">
                     <div class="grid grid-cols-1  lg:grid-cols-4 gap-6">
+                        
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Course.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Course.jpeg" alt="B.Tech Completion" onclick="openModal(this.src, 'B.Tech Completion Certificate')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">B.Tech Completion Certificate</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Nptel.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Nptel.jpeg" alt="NPTEL Data Science" onclick="openModal(this.src, 'NPTEL - Data Science For Engineers')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">NPTEL - Data Science For Engineers</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="RH 1.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="RH 1.jpeg" alt="Red Hat I" onclick="openModal(this.src, 'Red Hat Administration - I')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Red Hat Administration - I</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="RH 2.png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="RH 2.png" alt="Red Hat II" onclick="openModal(this.src, 'Red Hat Administration - II')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Red Hat Administration - II</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Python.jpg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Python.jpg" alt="IBM Python" onclick="openModal(this.src, 'IBM - Python')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - Python</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Java.jpg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Java.jpg" alt="IBM Java" onclick="openModal(this.src, 'IBM - Java')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - Java</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Cloud.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Cloud.jpeg" alt="IBM Cloud" onclick="openModal(this.src, 'IBM - Cloud App Devlop')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - Cloud App Devlop</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="BI.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="BI.jpeg" alt="IBM Business Intelligence" onclick="openModal(this.src, 'IBM - Business Intelligence')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - Buisness Intelligence</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="BigData.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="BigData.jpeg" alt="IBM Big Data" onclick="openModal(this.src, 'IBM - Big Data Engineer')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - BigData Engineer</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="ML.png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="ML.png" alt="IBM ML" onclick="openModal(this.src, 'IBM - ML w/ Watson Studio')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - ML w/ Watson Studio </p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="AI.png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="AI.png" alt="IBM AI" onclick="openModal(this.src, 'IBM - AI Analyst')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">IBM - AI Analyst</p>
                             </div>
                         </div>
                         
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Chatgpt.jpg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Chatgpt.jpg" alt="Chatbot" onclick="openModal(this.src, 'Chatbot Development')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Chatbot Development</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Arch.png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Arch.png" alt="AWS Arch" onclick="openModal(this.src, 'AWS Architecture Certificate')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">AWS Architecture Certificate</p>
                             </div>
                         </div>
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="UI.jpg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="UI.jpg" alt="UI UX" onclick="openModal(this.src, 'UI/UX')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">UI/UX</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Matplotlib.png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Matplotlib.png" alt="Matplotlib" onclick="openModal(this.src, 'Python - Matplotlib')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Python - Matplotlib</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="HTML.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="HTML.jpeg" alt="HTML CSS" onclick="openModal(this.src, 'HTML / CSS')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">HTML / CSS</p>
                             </div>
                         </div>
-               
+                
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="GenAI.png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="GenAI.png" alt="TATA Gen AI" onclick="openModal(this.src, 'TATA Gen AI Data Analytics')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">TATA Gen AI Data Analytics</p>
                             </div>
                         </div>
 
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Code up.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Code up.jpeg" alt="Code Up" onclick="openModal(this.src, 'Code Up')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Code up</p>
                             </div>
                         </div>
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Data .png" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Data .png" alt="Data Science" onclick="openModal(this.src, 'Data Science and Analytics')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Data science and Analytics</p>
                             </div>
                         </div>
                         <div class="bg-card-bg rounded-lg shadow overflow-hidden transform transition duration-300 hover:scale-[1.03]">
-                            <img src="Power BI.jpeg" alt="Certification Title 1" class="w-full h-60 object-cover" title="Certification Title 1">
+                            <img src="Power BI.jpeg" alt="Power BI" onclick="openModal(this.src, 'Power BI')" class="w-full h-60 object-cover cursor-pointer">
                             <div class="p-3 text-center">
                                 <p class="text-sm font-medium truncate">Power BI</p>
                             </div>
@@ -513,23 +520,40 @@
     <footer class="bg-gray-800 text-gray-400 py-6 text-center">
         <p>&copy; 2025 JayaVarshini J V <br/> Built with Tailwind CSS and HTML<i class="fas fa-heart text-red-500"></i>.</p>
     </footer>
+
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeModal(event)">
+        <div class="relative bg-card-bg rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto shadow-2xl modal-animate flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl focus:outline-none z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="p-6 w-full flex flex-col items-center">
+                <h3 id="modalTitle" class="text-2xl font-bold text-primary-indigo mb-4 text-center"></h3>
+                <img id="modalImage" src="" alt="Full View" class="max-h-[70vh] w-auto object-contain rounded-md shadow-lg border border-gray-700">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImg.src = imageSrc;
+            modalTitle.innerText = title;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        function closeModal(event) {
+            // Close if button is clicked or if background overlay is clicked (handled by onclick propagation check)
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
